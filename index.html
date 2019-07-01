@@ -15,21 +15,50 @@
   <script type="text/babel">
     class App extends React.Component {
       state = {
-        name: 'Crystal',
-        age: 35
+        name: 'Ryu',
+        age: 30
       }
+
+      handleClick(e){
+        // console.log(e.target)
+        console.log(this.state.age)
+      }
+
+      handleMouseOver(e){
+        console.log(e.target, e.pageX)
+      }
+
+      handleCopy(e){
+        console.log('Try being original for once!')
+      }
+
       render() {
         return (
           <div className="app-content">
-            <h1>Hey, ninjas</h1>
             <p>My name is: { this.state.name } and I am { this.state.age } </p>
-            </div>
-        )
-      }
-    }
+            <h1>Hey, ninjas</h1>
+            <button onClick={this.handleClick}>Click Me</button>
+            <button onMouseOver={this.handleMouseOver}>Hover me</button>
+            <p onCopy={this.handleCopy}>What we think, we become</p>
+              </div>
+              )
+            }
+          }
 
     ReactDOM.render(<App />, document.getElementById('app'));
   </script>
 
 </body>
 </html>
+
+<h1></h1>
+<div></div>
+<body></body>
+<p></p>
+<div >
+  <ul></ul>
+    <li><span class="hello1"></span></li>
+    <li><span class="hello2"></span></li>
+    <li><span class="hello3"></span></li>
+  </ul>
+</div>
