@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Ninjas extends Component{
   render(){
-    // console.log(this.props);
+    console.log(this.props);
     const { ninjas } = this.props
     const ninjaList = ninjas.map(ninja => {
       return (
